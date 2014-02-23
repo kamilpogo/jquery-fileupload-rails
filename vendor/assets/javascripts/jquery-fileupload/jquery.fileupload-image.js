@@ -259,7 +259,7 @@
                 }
                 var that = this,
                     dfd = $.Deferred();
-                loadImage(data.files[data.index], function (result) {
+                loadImage.parseMetaData(data.files[data.index], function (result) {
                     $.extend(data, result);
                     dfd.resolveWith(that, [data]);
                 }, options);
